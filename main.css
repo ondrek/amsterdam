@@ -23,10 +23,10 @@
 	
 	html body {
 		font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-		max-width: 1200px;
+		max-width: 800px;
 		margin: 0 auto;
 		color: #2C3E50;
-		font-size: 13px;
+		font-size: 14px;
 		line-height: 27px;
 	}
 
@@ -45,7 +45,7 @@
 	}
 	
 	html nav {
-		padding: 10px 20px;
+		padding: 10px 0px;
 	}
 	
 	html nav a {
@@ -68,7 +68,7 @@
 	
 	html ul {
 		list-style-type: none;
-		margin: 0;
+		padding: 0;
 	}
 	
 	html time {
@@ -97,10 +97,28 @@
 		text-decoration: underline;
 	}
 
+/* page */
+	
+	section {
+		margin-top: 20px;
+		padding-top: 20px;
+		border-top: 1px solid #F1F1F1;
+	}
+	
+	article {
+		width: 800px;
+	}
+	
+
 /* footer */
 	
 	footer {
 		margin: 100px 0 14px 0;
+		color: #D5D5D5;
 	}
 	
+	footer a {
+		text-decoration: underline;
+		color: inherit;
+	}
 
