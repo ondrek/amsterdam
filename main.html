@@ -15,13 +15,15 @@
 
 	<link rel="shortcut icon" href="http://scriptogr.am/lib/img/favicon.ico" />
 	<link rel="alternate" type="application/rss+xml" title="RSS" href="{{base_url}}/feed" />
+	
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
 
 	{{css}}
 
 </head><body>
 
 	<header>
-		<h1><a href="{{home_link}}">{{author}}'s Blog</a></h1>
+		<h1><a href="{{home_link}}">{{author}}'s blog</a></h1>
 		<h2>{{blog_title}}</h2>
 	</header>
 
@@ -43,7 +45,10 @@
 		{{/posts}} 
 		</ul>
 	
-		{{pagination}}
+		<div class="pagination">
+			{{pagination}}
+			<a href="/archive">.. or check my archive.</a>
+		</div>
 
 	{{/is_index}}
 
