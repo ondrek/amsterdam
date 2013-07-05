@@ -1,5 +1,9 @@
 <!DOCTYPE html> 
 <html lang="en"><head>
+	
+	{{#is_index}}
+	<script type="text/javascript">window.location.href="/archive";</script>
+	{{/is_index}}
 
 	<meta charset="utf-8" />
 
@@ -38,10 +42,7 @@
 
 		<ul>
 		{{#posts}}
-			<li>
-				<time>{{prettydate}}</time>
-				<h3><a href="{{permalink}}">{{title}}</a></h3>
-			</li>
+			<li><time>{{prettydate}}</time><a href="{{permalink}}">{{title}}</a></li>
 		{{/posts}} 
 		</ul>
 	
@@ -57,10 +58,7 @@
 
 		<ul>
 		{{#posts}}
-			<li>
-				<time>{{prettydate}}</time>
-				<h3><a href="{{permalink}}">{{title}}</a></h3>
-			</li>
+			<li><time>{{prettydate}}</time><a href="{{permalink}}">{{title}}</a></li>
 		{{/posts}} 
 		</ul>
 
