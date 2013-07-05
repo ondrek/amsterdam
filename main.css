@@ -23,7 +23,7 @@
 	
 	html body {
 		font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-		max-width: 800px;
+		max-width: 700px;
 		margin: 0 auto;
 		color: #2C3E50;
 		font-size: 14px;
@@ -40,12 +40,12 @@
 	}
 	
 	html header {
-		padding: 15px 27px;
+		padding: 15px 0;
 		text-align: right;
 	}
 	
 	html nav {
-		padding: 10px 0px;
+		padding: 10px 0px 40px;
 	}
 	
 	html nav a {
@@ -73,7 +73,8 @@
 	
 	html time {
 		display: inline-block;
-		width: 100px;
+		width: 120px;
+		color: #BDBDBD;
 	}
 	
 	html h3 {
@@ -106,7 +107,7 @@
 	}
 	
 	article {
-		width: 800px;
+		width: 700px;
 	}
 	
 
