@@ -66,12 +66,12 @@
 	
 /* article */
 	
-	html ul {
+	.posts {
 		list-style-type: none;
 		padding: 0;
 	}
 	
-	html time {
+	time {
 		display: inline-block;
 		width: 120px;
 		color: #BDBDBD;
@@ -110,16 +110,37 @@
 		width: 700px;
 	}
 	
+	article footer {
+		margin: 70px 0 0;
+	}
+	
+/* markdown styling */	
+	
+	article h2 {
+		font-size: 19px;
+		line-height: 36px;
+		margin-top: 31px;
+	}
+	
 
 /* footer */
 	
-	footer {
-		margin: 100px 0 14px 0;
+	body > footer {
+		margin: 20px 0 14px 0;
 		color: #D5D5D5;
+		font-size: 12px;
 	}
 	
-	footer a {
+	body > footer a {
 		text-decoration: underline;
 		color: inherit;
 	}
 
+/* code prettify */
+	
+	.prettyprint {
+		font-size: 12px;
+		line-height: 17px;
+		padding: 21px;
+		border-color: #EBEBEB;
+	}

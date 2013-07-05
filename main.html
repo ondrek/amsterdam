@@ -38,12 +38,13 @@
 		{{/pages}}
 		<a href="{{base_url}}/feed">#RSS</a>
 		<a href="http://ondrek.com">#About</a>
+		<a href="http://twitter.com/ondrek">#Twitter</a>
 	</nav>
 
 
 	{{#is_index}}
 
-		<ul>
+		<ul class="posts">
 		{{#posts}}
 			<li><time>{{prettydate}}</time><a href="{{permalink}}">{{title}}</a></li>
 		{{/posts}} 
@@ -59,7 +60,7 @@
 
 	{{#is_archive}}
 
-		<ul>
+		<ul class="posts">
 		{{#posts}}
 			<li><time>{{prettydate}}</time><a href="{{permalink}}">{{title}}</a></li>
 		{{/posts}} 
@@ -88,7 +89,9 @@
 				</ul>  
 				{{/if_tags}}
 		
-				<a href="{{base_url}}/archive">More articles</a>
+				<footer>
+					<a href="{{base_url}}/archive">More articles</a>
+				</footer>
 		
 			</article>
 
@@ -120,7 +123,9 @@
 					</ul>  
 				{{/if_tags}}
 				
-				<a href="{{base_url}}/archive">Some my articles..</a>
+				<footer>
+					<a href="{{base_url}}/archive">Some my articles..</a>
+				</footer>
 		
 			</section>
 
