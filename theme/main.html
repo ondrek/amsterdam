@@ -1,0 +1,174 @@
+<!DOCTYPE html> 
+<html lang="en"><head>
+	
+	<meta charset="utf-8" />
+	
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	
+	{{#is_index}}
+		<!-- you have option redirect user to Archive and display all articles
+		<script type="text/javascript">window.location.href="/archive";</script> -->
+	{{/is_index}}
+  
+    {{#is_archive}}
+		<title>{{author}} blog</title>
+	{{/is_archive}}
+	
+    {{#is_index}}
+		<title>{{author}} blog</title>
+	{{/is_index}}
+	
+    {{#is_post}}
+		<title>{{title}} ispost</title>
+	{{/is_post}}
+  
+	<meta name="description" content="{{author}} {{blog_title}}" />
+	<meta name="robots" content="index, follow" />
+
+	<link rel="shortcut icon" href="http://scriptogr.am/lib/img/favicon.ico" />
+	<link rel="alternate" type="application/rss+xml" title="RSS" href="{{base_url}}/feed" />
+	
+	{{css}}
+
+</head><body>
+
+	<header>
+		<h1><a href="{{home_link}}">Samuel Ondrek's Blog</a></h1>
+		<h2>{{blog_title}}</h2>
+	</header>
+
+	<nav>
+		{{#pages}}
+		<a href="{{permalink}}">#{{title}}</a>
+		{{/pages}}
+	</nav>
+	
+	<aside>
+		
+		<section>
+			<h2>Who to hell is this dude</h2>
+			<p>Samuel Ondrek is front-end developer with passion in CSS, UX, NodeJs. I have a few projects on Github, profil on LinkedIn, Twitter.</p>
+		</section>
+		
+		<section>
+			<h2>Social</h2>
+			<ul>
+				<li><a href="http://ondrek.com">#About</a></li>
+				<li><a href="{{base_url}}/feed">#RSS</a></li>
+				<li><a href="http://twitter.com/ondrek">#Twitter</a></li>
+			</ul>
+		</section>
+		
+		<footer>
+			<h2>Footer</h2>
+			Using <a href="http://scriptogr.am">Scriptogr.am</a>, Semantical HTML5 markup & Clean CSS3, Deployment on Dropbox amp; my own <a href="https://github.com/ondrek/scriptogram-theme">Scriptogram Theme</a>
+		</footer>
+		
+	</aside>
+
+	{{#is_index}}
+
+		<ul class="posts">
+		
+			{{#posts}}
+			<li>
+				<h2><a href="{{permalink}}">{{title}}</a></h2>
+				<time>{{prettydate}}</time>
+				<div>{{content}}</div>
+			</li>
+			{{/posts}} 
+		
+			<li class="pagination">
+				{{pagination}} <a href="/archive" class="archive">.. or check my archive.</a>
+			</li>
+			
+		</ul>
+
+	{{/is_index}}
+
+
+	{{#is_archive}}
+
+		<ul class="posts">
+			{{#posts}}
+			<li>
+				<a href="{{permalink}}">{{title}}</a>
+				<time>{{prettydate}}</time>
+			</li>
+			{{/posts}} 
+		</ul>
+
+	{{/is_archive}}
+
+	{{#posts}}
+
+		{{#is_post}}
+
+			<article class="post">
+				
+				<h2><a href="{{permalink}}">{{title}}</a> {{#post_permalink}}<a href="{{post_permalink}}">#</a>{{/post_permalink}}</h2>
+				<time>{{prettydate}}</time>
+		
+				{{#excerpt}}<span class="introduction">{{excerpt}}</span>{{/excerpt}}
+		
+				{{content}}
+		
+				{{#if_tags}}
+					<ul class="tags">
+					{{#tags}}
+					<li><a href="{{base_url}}/tag/{{name}}">{{name}}</a></li>
+					{{/tags}}
+					</ul>  
+				{{/if_tags}}
+		
+				<footer>
+					<a href="{{base_url}}/archive">More articles</a>
+					<a href="https://twitter.com/share">Tweet this page!</a>
+					<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+				</footer>
+		
+			</article>
+
+		{{/is_post}}
+
+
+		{{#is_page}}
+
+			<article class="post">
+		
+				<h2>
+					<a href="{{permalink}}">{{title}}</a>
+					{{#post_permalink}} 
+					<a href="{{post_permalink}}">#</a>
+					{{/post_permalink}}
+				</h2>
+		
+				{{#excerpt}}
+					<p>{{excerpt}}</p>
+				{{/excerpt}}
+		
+				<p>{{content}}</p>
+		
+				{{#if_tags}}
+					<ul class="tags">
+						{{#tags}}
+							<li><a href="{{base_url}}/tag/{{name}}">{{name}}</a></li>
+						{{/tags}}
+					</ul>  
+				{{/if_tags}}
+				
+				<footer>
+					<a href="{{base_url}}/archive">Some my articles..</a>
+				</footer>
+		
+			</article>
+
+		{{/is_page}}
+
+	{{/posts}}
+	
+	<!-- this is way how to disable scriptogram google analytics - bit.ly/13qdiuX & bit.ly/19ZG5p3 -->
+	<script type="text/javascript">window['ga-disable-UA-33446752-1'] = true;</script>
+	
+</body></html>                                                                                                                                                                                                                                                                                                                                                                                                                           
