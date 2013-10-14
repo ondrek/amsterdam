@@ -1,4 +1,4 @@
-# Scriptogram Theme
+# Scriptogram Theme - Amsterdam
 
 ## When should I read this?
 
