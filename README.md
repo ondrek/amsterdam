@@ -1,20 +1,17 @@
-# Scriptogram Theme - Amsterdam
+# Amsterdam is a Scriptogram theme
 
-## when should I read this?
+## When shall I read this?
 
  - when you want to use my scriptogram theme
  - when you like this theme (screenshots in folder `screenshots`)
 
 ## why should I use this scritogram theme?
 
- - semantical HTML5 markup
- - CSS3 features and a minimalistic visual design
- - simple to use
- - responsive design with Media Queries
- - RSS support meta tag
- - from index to archive redirecting support
- - paggination support
- - free; open source
+ - Semantic HTML5 markup with CSS3 features and minimalistic GUI
+ - Simple to use with RSS support meta tags
+ - Responsive design with Media Queries
+ - Paggination support; Index/archive redirecting support
+ - Free; Open source; MIT Licence
  
 ## About licence and author
  
